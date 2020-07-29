@@ -15,7 +15,7 @@ else
     echo "$filename exists.  Not downloading $url."
   else
     echo "Retrieving $url .."
-    wget -q --show-progress --progress=bar:force:noscroll $url
+    #wget -q --show-progress --progress=bar:force:noscroll $url
   fi
 fi
 

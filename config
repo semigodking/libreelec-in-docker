@@ -11,8 +11,8 @@ extport=18080
 
 # autodetection needs work!
 if [ $release == "detect" ]; then
-  if (lsmod | grep "midgard_kbase" >/dev/null); then
-    gpu=midgard
+  if (lsmod | grep "panfrost" >/dev/null); then
+    gpu=panfrost
     chipset=rk3399
     release=rockpro64
   elif (lsmod | grep "mali" >/dev/null); then
@@ -40,6 +40,6 @@ fi
 # url="https://github.com/mrfixit2001/recalbox_rockpro64/releases/download/190222/recalbox_rockpro64_190222.img.xz"
 
 # url="https://test.libreelec.tv/LibreELEC-RK3399.arm-9.1-nightly-20190324-5ccaa74-${release}.img.gz"
-url="https://test.libreelec.tv/LibreELEC-RK3399.arm-9.1-nightly-20190401-47af2b4-${release}.img.gz"
+url="file://tmp/LibreELEC-ARMv8.aarch64-9.80-devel-20200723133804-4ee705d-rk3399.img.gz"
 
 echo "Release: $url"
